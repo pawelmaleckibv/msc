@@ -1,0 +1,31 @@
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:tx="http://www.springframework.org/schema/tx"-->
+<!--       xmlns:jee="http://www.springframework.org/schema/jee"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd-->
+<!--        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd-->
+<!--        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd-->
+<!--        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd-->
+<!--        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd">-->
+
+<!--    &lt;!&ndash;<bean id="testQuestionCreator" class="com.blueveery.cmm.testdata.TestQuestionCreator"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<bean id="testQuestionaryCreator" class="com.blueveery.cmm.testdata.TestQuestionaryCreator">&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="questionCreator" ref="testQuestionCreator"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;</bean>&ndash;&gt;-->
+
+<!--    <context:component-scan base-package="com.blueveery.cmm.tests"/>-->
+<!--    <context:component-scan base-package="com.blueveery.cmm.testdata"/>-->
+
+<!--    &lt;!&ndash;<import resource="classpath:cmm-service-impl-spring-context.xml"/>&ndash;&gt;-->
+
+<!--    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">-->
+<!--        <property name="entityManagerFactory" ref="cmm-pu"/>-->
+<!--    </bean>-->
+
+<!--    <jee:jndi-lookup id="cmm-pu" jndi-name="java:jboss/jpa/cmmEMF"-->
+<!--                     expected-type="javax.persistence.EntityManagerFactory"/>-->
+
+<!--    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>-->
+
+<!--</beans>-->

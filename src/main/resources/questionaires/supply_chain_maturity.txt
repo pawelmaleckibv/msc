@@ -1,0 +1,58 @@
+Do you have a monthly supply chain review meeting and how is it best described?
+Yes with a structured agenda and purpose. The supply chain review manages supply chain performance and drives optimisation of the supply chain network performance and costs.
+Yes. The supply review focuses on balancing demand and supply issuesb.	Yes. The supply review focuses on balancing demand and supply issues.
+We do not have a formal monthly supply chain review meeting.
+
+What is the frequency of the supply chain review meeting?
+Monthly
+Weekly
+Quarterly
+We do not have a supply review meeting
+
+Is the supply plan expressed in:
+Volume
+Cost
+Both of the above
+
+What is the horizon of the supply plan?
+1-3 months
+1-12 months
+1-18 months
+1-24 months
+1-36 months+
+
+What level of collaboration exists across the supply chain?
+No links with suppliers or customers. All nodes in the supply chain managed independently.
+VMI and customer plans being developed.
+Integrated supply chain links with logistics, distribution and internal supply.
+Collaborative service level agreements with key external supply chain partners – and strategic inventory deployment.
+
+How does the business utilise the supply plan?
+The supply plan focuses on supply chain strategy deployment.
+The supply chain focuses on alignment on the supply plan across the supply chain and forms the basis of the financial plan.
+Main focus is on reducing impact of variability of performance and controlling costs.
+
+What is the current performance and implications of the supply chain inventory?
+Inventory buffers between supply points enables internal performance.
+Master data and transaction integrity and timeliness assured. Inventory accuracy 95%.
+95%+ performance across each node in the supply chain improves inventory optimisation.
+All processes are 99%+ capable and near invariant (6 sigma) Collaborative agreements in place to hold the inventory at the place within the extended supply chain with agile response time to deliver for full inventory optimisation.
+
+How well utilised and integrated are the planning systems in your business?
+No common planning system application used in the business.
+Planning system applications are used at a basic level
+ERP system is used, sometimes supported by advanced planning system.
+ERP system application fully integrated across the business provides end-to-end supply chain visibility. Some customer plans being managed.
+Advanced planning, optimizing and scheduling system automates routine scheduling and customer promising.
+
+How do you manage vulnerabilities and opportunities?
+There is no formal process for management of vulnerabilities and opportunities.
+Vulnerabilities and opportunities are now being identified within the supply chain management process but are not formally communicated or managed across the business.
+Vulnerability and opportunity management are fully integrated with the supply chain management process and supported with scenario planning.
+Opportunity management is now proactively used to drive business growth.
+
+Which statement best describes resource planning in your business?
+Little or no formal resource planning processes.
+The resource planning is based on needs and best performance.
+There is resource planning for all key resources based on past performance.
+Future valid resource plans identify the key resource requirements and improvements to drive a balanced and effective supply chain capability.

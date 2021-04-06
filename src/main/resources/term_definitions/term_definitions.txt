@@ -1,0 +1,10 @@
+Änderungsmanagement
+Unter Veränderungsmanagement (auch Änderungsmanagement) lassen sich alle Aufgaben,  Maßnahmen und Tätigkeiten zusammenfassen, die eine umfassende, bereichsübergreifende und inhaltlich weitreichende Veränderung – zur Umsetzung neuer Strategien, Strukturen, Systeme, Prozesse oder Verhaltensweisen – in einer Organisation bewirken sollen. Mit der Verfolgung von Änderungen an Produkten befasst sich das Änderungswesen.
+Feldbus
+Ein Feldbus ist ein Bussystem, das in einer Anlage Feldgeräte wie Messfühler (Sensoren) und Stellglieder (Aktoren)  zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Wenn mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden, dann muss festgelegt sein, wer (Kennung) was (Messwert, Befehl) wann (Initiative) sagt. Hierfür gibt es normierte Protokolle.
+Personalentwicklung
+Die Personalentwicklung umfasst die auf die Bedarfe und Bedürfnisse der Organisation abgestimmte berufseinführende,  berufsbegleitende und arbeitsplatznahe Aus- und Weiterbildung des Personals sowie der Ableitung geeigneter Maßnahmen und Strategien aus den Unternehmenszielen, die eine Qualifizierung des Personals zum Ziel haben. Dabei sind Aspekte der Organisationsentwicklung und die Bedürfnisse der verschiedenen Anspruchsgruppen des Unternehmens (bspw. Berufseinsteiger, Fachkräfte, High-Potentials) zu berücksichtigen.
+Prozessdaten
+Prozessdaten sind analoge und digitale Werte, die aus einem technischen Prozess mittels Sensoren gewonnen werden. Die Prozessdaten repräsentieren den aktuellen Zustand des Prozesses in der Leittechnik. Prozessdaten werden dem Bediener angezeigt, archiviert und dienen zur automatischen Beeinflussung des Prozesses. In manchen Anwendungsgebieten bezeichnet Prozessdaten auch die archivierten Prozessdaten.
+QR-Code
+Der QR-Code (englisch Quick Response, „schnelle Antwort“, als Markenbegriff „QR Code“) ist ein zweidimensionaler Code. Aufgrund einer automatischen Fehlerkorrektur ist dieses Verfahren sehr robust und daher weit verbreitet. Weiterentwicklungen sind der Micro-QR-Code, der Secure-QR-Code (SQRC), der iQR-Code und der Frame QR Code.

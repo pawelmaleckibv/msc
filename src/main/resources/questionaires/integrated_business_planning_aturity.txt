@@ -1,0 +1,64 @@
+What is the frequency of the meetings (Reviews) in your process
+Weekly
+Monthly - some people show
+Monthly - all the right people show up
+Quarterly
+
+Who “chairs” the meetings (reviews)
+Managers in the department area
+Members of the executive leadership team responsible for the delivery of strategy in that area
+Supply Chain
+Data experts (eg Demand Manager, Planning Manager)
+
+What is the focus of the meetings (reviews)
+Short term volumes (next 3-6 months)
+This years volumes and business plan
+Medium to long term business plan and strategy (next 2/3+ years)
+A rolling horizon appropriate for deploying the strategy (minimum 24 months)
+
+How well prepared are the meetings (reviews)
+Most of the work is done in the meeting
+The numbers are usually well prepared but no one else has read the input
+Everyone has read the pre-read and focus is on the issues that need to be addressed
+Everyone participates actively focused on the issues that have been highlighted through the process
+The process works smoothly, the information is a given and the focus in the review is on gap closing actions to deploy the strategy
+
+How well integrated is your process in running the business
+The business sometimes uses the numbers to inform the leadership team (the board)
+The leadership team (board) review the numbers every month as part of their management team input
+There are explicit assumptions underlying all the numbers and the leadership team review the issues and gaps and actions in order to drive the business
+This is the process used by the leadership team to run the business
+This is the process used by the leadership team to deploy the strategy
+
+How well integrated is Finance
+There are no financial numbers prepared by finance used in the process
+Finance attend the meetings (reviews) and prepare their numbers outside the process
+Finance are integrated into the process of preparation, attend the reviews as part of the team and there is congruence between the numbers (volume & value)
+The Annual Business Plan (Budget) is effectively a snap shot of the outcomes from the reviews with little adjustment
+The integration between financial and volume numbers is seamless and a rolling “budget” is operated.
+
+How well integrated is Commercial (Sales & Marketing)
+Commercial see the numbers and often dispute them
+Commercial assist in putting the numbers together
+Commercial own the numbers and integrate financial planning into them (margins and costs)
+Commercial use the process to drive growth in value through the integration of the 5Ps (Product, Price, Place, Promotion and People)
+In addition to (d) commercial use the process to deploy the strategy
+
+Analytics, modelling and Optimization.
+The planning processes are supported by basic tools & techniques using spread sheets and statistical forecasting /APS.
+Analytics are used to understand the true “Cause and Effect” of all activities across Demand, Supply, Product and Finance.
+Analytics are sufficiently robust to create a working automated model that simulates the plans of the business and provides insights to the plan elements and decisions
+The computer modelling is sufficiently robust to provide optimized outcomes that deliver choices to the management teams in all elements of the process
+
+Reliability Performance
+Reliability is considered poor but not measured (Product, demand, supply)
+Reliability is measured and is less than 95% on time and / or bias still exists (Product business case, Demand plans, Capability Plans)
+Reliability is 95% or better (product on time, supply on time, etc) and bias is eliminated
+Reliability is a given and performance is being driven to upper quartile benchmarks
+
+Business performance (due to the process)
+The process is not designed to deliver improved business outcome
+Customer service has improved and inventory is reduced
+Profits, costs, working Capital and margins are all showing signs of improvement as a result of the process
+Growth and business improvement are improving significantly as a result with clear Opportunities (Volume & Value) and Vulnerabilities
+Strategy is being deployed and achieved as a result of the process

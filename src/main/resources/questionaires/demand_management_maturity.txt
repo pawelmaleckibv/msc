@@ -1,0 +1,62 @@
+Do you have a monthly demand review meeting and how is it best described?
+Yes with a structured agenda and purpose. The demand review manages performance and drives sales and marketing ownership for market and customer plans.
+Yes. The demand review focuses on balancing demand and supply issues
+We do not have a formal monthly demand review meeting
+
+What is the frequency of the demand review meeting?
+Monthly
+Weekly
+Quarterly
+We do not have a demand review meeting
+
+Is the demand plan expressed in:
+Volume
+Value
+Margin
+All the above
+2 of the above
+
+What is the horizon of the demand plan?
+1-3 months
+1-12 months
+1-18 months
+1-24 months
+1-36 months+
+
+Is the demand plan unconstrained (not constrained by supply issues)?
+Yes
+No
+
+Who owns the demand planning process?
+Sales
+Sales & Marketing
+Finance
+Supply
+
+How does the business utilise the demand plan?
+The demand plan focuses on sales and marketing strategy deployment
+The demand plan drives supply chain plans and forms the basis of the financial plan
+Demand drives the factory supply plan
+Supply planning make changes to the demand plan based on demonstrated performance
+Supply planning do not utilise the demand plan
+
+What measures are used by the demand team?
+Bias
+Demand Error
+Demand plan Accuracy
+Two of these
+All of these
+None of these
+
+Which statement best describes the demand plan in your business?
+The demand plan is based on past performance/actual sales
+The demand plan reflects the financial targets
+Sales and Marketing assumptions underpin the demand plan and are fully documented, time phased, and owned.
+The demand plan is built upon statistical modelling plus anticipated sales and marketing assumptions and plans which are fully documented, time phased and owned.
+The demand plan is based on our understanding of the co-efficiencies between business analytics which are embedded in the business
+
+How do you manage vulnerabilities and opportunities?
+There is no formal process for management of vulnerabilities and opportunities.
+Vulnerabilities and opportunities are now being identified within the demand management process but are not formally communicated or managed across the business.
+Vulnerability and opportunity management are fully integrated with the demand management process and supported with scenario planning
+Opportunity management is now proactively used to drive business growth
