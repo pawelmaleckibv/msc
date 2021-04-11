@@ -35,6 +35,17 @@ public class TestUserEmploymentCreator extends TestDataCreator<Employment> {
         return employment;
     }
 
+    public Employment createSpecificEmplyment(Role role, String id) {
+        Employment employment = new Employment(role);
+        employment.setId(UUID.fromString(id));
+        employment.setEmail(generateEmail());
+        employment.setExpirationDate(generateExpirationDate());
+        employment.setAccountStatus(generateAccountStatus());
+        employment.setIsTutorialWatched(true);
+        employment.setDeleted(false);
+        return employment;
+    }
+
     public void setUpEmploymentsList() {
         employmentList.add(getEntityManager().find(Employment.class, UUID.fromString("3d29bffa-5c42-4e7b-aa63-9a2208011694")));
         employmentList.add(getEntityManager().find(Employment.class, UUID.fromString("47a917f0-4784-439d-80c9-e0a6ff1ed92e")));

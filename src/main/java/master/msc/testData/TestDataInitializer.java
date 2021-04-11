@@ -101,44 +101,48 @@ public class TestDataInitializer {
     @PostConstruct
     public void init() {
         TransactionStatus transaction = transactionManager.getTransaction(new DefaultTransactionAttribute());
-        executeSQLScript("languages.sql");
-        executeSQLScript("employments.sql");
-        executeSQLScript("functionality.sql");
+        executeSQLScript("sql/languages.sql");
+        executeSQLScript("sql/employments.sql");
+        executeSQLScript("sql/functionality.sql");
 //        executeSQLScript("static_translations.sql");
 
         List<Organization> organizations = new ArrayList<>();
         organizations.add(testFestoCreator.doCreateEntity());
-        organizations.add(testBoshCreator.doCreateEntity());
-
-
-        List<BusinessUnit> businessUnits = testUnitsImporter.importBusinessUnits();
-        businessUnits.addAll(testUnitsImporter.importBusinessUnits());
-
-        List<MaturityLevel> maturityLevels = testMaturityLevelCreator.createCollection(2);
-        List<TermDefinition> termDefinitions = testTermDefinitionCreator.createCollection();
-
-        assignOrganizationsToUnits(organizations, businessUnits);
-        organizations.forEach(organization -> testUsersImporter.importCompanyUsers(organization));
-
-        assignOrganizationEmployees(organizations);
-        assignOrganizationAdmins(organizations);
-        assignOrganizationWhiteLabelParam(organizations);
-        assignOrganizationMaturityLevel(organizations, maturityLevels);
-
-        generateEmploymentsInUnits(businessUnits);
-//        generateMachineGroupsInUnits(businessUnits);
-//        generateMaturityEvaluationInUnits(businessUnits);
+//        organizations.add(testBoshCreator.doCreateEntity());
+//
+//
+//        List<BusinessUnit> businessUnits = testUnitsImporter.importBusinessUnits();
+//        businessUnits.addAll(testUnitsImporter.importBusinessUnits());
+//
+//        List<MaturityLevel> maturityLevels = testMaturityLevelCreator.createCollection(2);
+//        List<TermDefinition> termDefinitions = testTermDefinitionCreator.createCollection();
+//
+//        assignOrganizationsToUnits(organizations, businessUnits);
+//        organizations.forEach(organization -> testUsersImporter.importCompanyUsers(organization));
+//
+////        assignOrganizationEmployees(organizations);
+////        assignOrganizationAdmins(organizations);
+//        assignOrganizationWhiteLabelParam(organizations);
+//        assignOrganizationMaturityLevel(organizations, maturityLevels);
+//
+////        generateEmploymentsInUnits(businessUnits);
+////        generateMachineGroupsInUnits(businessUnits);
+////        generateMaturityEvaluationInUnits(businessUnits);
 //        importQuestionairesInUnits(businessUnits);
-//        assignTasksForQuestions(businessUnits);
-
-        List<Comment> comments = testCommentCreator.createCollection(2);
-
-        List<MaturityLevelTransition> maturityLevelTransitions = testMaturityLevelTransitionCreator.createCollection(2);
+////        assignTasksForQuestions(businessUnits);
+//
+//        List<Comment> comments = testCommentCreator.createCollection(2);
+//
+//        List<MaturityLevelTransition> maturityLevelTransitions = testMaturityLevelTransitionCreator.createCollection(2);
 //        List<TaskCommentChange> taskCommentChanges = testTaskCommentChangeCreator.createCollection(2);
 
 //        copyTranslations();
 
-//        transactionManager.commit(transaction);
+        try {
+            transactionManager.commit(transaction);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void assignTasksForQuestions(List<BusinessUnit> businessUnits) {
@@ -203,11 +207,11 @@ public class TestDataInitializer {
         }
     }
 
-    private void assignOrganizationEmployees(List<Organization> organizations) {
+    private void assignOrganizationEmployees(List<Organization> organizations, Employment oadmin, Employment staff, Employment executor) {
         organizations.forEach(organization -> {
-            Employment oadmin = testPersonCreator.createPersonWithEmploymentId("oadmin", "18610c8a-3256-43a0-8c16-596b42a3809d");
-            Employment staff = testPersonCreator.createPersonWithEmploymentId("STAFF", "47a917f0-4784-439d-80c9-e0a6ff1ed92e");
-            Employment executor = testPersonCreator.createPersonWithEmploymentId("EXECUTOR", "3d29bffa-5c42-4e7b-aa63-9a2208011694");
+//            Employment oadmin = testPersonCreator.createPersonWithEmploymentId("oadmin", "18610c8a-3256-43a0-8c16-596b42a3809d");
+//            Employment staff = testPersonCreator.createPersonWithEmploymentId("STAFF", "47a917f0-4784-439d-80c9-e0a6ff1ed92e");
+//            Employment executor = testPersonCreator.createPersonWithEmploymentId("EXECUTOR", "3d29bffa-5c42-4e7b-aa63-9a2208011694");
             oadmin.setOrganization(organization);
             staff.setOrganization(organization);
             executor.setOrganization(organization);

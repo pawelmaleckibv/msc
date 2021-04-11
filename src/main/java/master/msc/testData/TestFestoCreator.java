@@ -17,9 +17,9 @@ public class TestFestoCreator extends TestDataCreator<Organization> {
     public Organization doCreateEntity() {
         Organization organization = new Organization();
         organization.setName("FESTO");
-        organization.setMission(readOrganizationMission(organization.getName().toLowerCase()));
-        organization.setVision(readOrganisationVision(organization.getName().toLowerCase()));
-        organization.setStrategy(readOrganisationStrategy(organization.getName().toLowerCase()));
+//        organization.setMission(readOrganizationMission(organization.getName().toLowerCase()));
+//        organization.setVision(readOrganisationVision(organization.getName().toLowerCase()));
+//        organization.setStrategy(readOrganisationStrategy(organization.getName().toLowerCase()));
 //        OrganizationLogo organizationLogo = (OrganizationLogo) attachmentService.createDoc(
 //                "png",
 //                "festoLogo",
