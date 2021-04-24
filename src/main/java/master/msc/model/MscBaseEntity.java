@@ -2,14 +2,12 @@ package master.msc.model;
 
 import com.blueveery.core.model.BaseEntity;
 
-import javax.persistence.MappedSuperclass;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Version;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
+@AttributeOverrides(value = @AttributeOverride(name = "id", column = @Column(columnDefinition = "VARCHAR(36)")))
 public class MscBaseEntity extends BaseEntity implements Serializable {
 
     @Version

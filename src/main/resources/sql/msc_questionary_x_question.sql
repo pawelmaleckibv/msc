@@ -1,0 +1,10 @@
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '192b7e7b-e887-4bdc-90f8-c337bf47fc74');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '659e2ca2-845e-4edb-b280-c0c1a3aa912d');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '822cbe81-4491-4129-abcf-b3c2e2e37cee');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '9021f00b-c526-4abb-a09f-bca22f5865d0');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', 'b7689bae-4013-4f1c-a471-04a724ca018e');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', 'b7883b50-8489-4ec3-adc7-aa07ac3a88ce');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', 'c751f978-1db7-4677-a9bb-a49fe4ddddfc');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', 'd5fa7a5b-4f20-45c1-a748-5673d42d1f90');
+INSERT INTO msc.questionary_x_question (questionary_id, question_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', 'ed99bdc8-9bd7-4e46-958b-3ea2c9415e6e');

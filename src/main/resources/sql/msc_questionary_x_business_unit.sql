@@ -1,0 +1,3 @@
+INSERT INTO msc.questionary_x_business_unit (questionary_id, business_unit_id) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '2f32dd73-0a4f-48ac-95d2-1c494bf1f131');
+INSERT INTO msc.questionary_x_business_unit (questionary_id, business_unit_id) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', '3214f7e3-5349-4bad-94b6-f8cea21ac566');
+INSERT INTO msc.questionary_x_business_unit (questionary_id, business_unit_id) VALUES ('0e613b76-9ea8-11eb-b70e-eb70a16a839c', '7315dc48-44f9-4522-9039-b932452b7894');

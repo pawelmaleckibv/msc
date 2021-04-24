@@ -104,8 +104,14 @@ public class TestDataInitializer {
         executeSQLScript("sql/languages.sql");
         executeSQLScript("sql/employments.sql");
         executeSQLScript("sql/functionality.sql");
-//        executeSQLScript("static_translations.sql");
+        executeSQLScript("sql/msc_questionaries.sql");
+        executeSQLScript("sql/msc_business_units.sql");
+        executeSQLScript("sql/msc_questionary_x_business_unit.sql");
+        executeSQLScript("sql/msc_questions.sql");
+        executeSQLScript("sql/msc_questionary_x_question.sql");
 
+
+//        executeSQLScript("static_translations.sql");
         List<Organization> organizations = new ArrayList<>();
         organizations.add(testFestoCreator.doCreateEntity());
 //        organizations.add(testBoshCreator.doCreateEntity());

@@ -1,0 +1,5 @@
+INSERT INTO msc.business_units (id, timestamp, version, name, organization_id, parentUnit_id) VALUES ('2f32dd73-0a4f-48ac-95d2-1c494bf1f131', '2021-04-24 18:29:19', 0, 'unit_name_1', null, null);
+INSERT INTO msc.business_units (id, timestamp, version, name, organization_id, parentUnit_id) VALUES ('3214f7e3-5349-4bad-94b6-f8cea21ac566', '2019-05-24 18:36:03', 1, 'unit_name_3', null, null);
+INSERT INTO msc.business_units (id, timestamp, version, name, organization_id, parentUnit_id) VALUES ('7315dc48-44f9-4522-9039-b932452b7894', '2012-04-24 18:36:14', 1, 'unit_name_5', null, null);
+INSERT INTO msc.business_units (id, timestamp, version, name, organization_id, parentUnit_id) VALUES ('9c53b479-3e4f-427b-9435-9e8b2782db32', '2018-04-24 18:34:57', 0, 'unit_name_2', null, null);
+INSERT INTO msc.business_units (id, timestamp, version, name, organization_id, parentUnit_id) VALUES ('e1edd656-3e39-4dcd-9f35-364bf01abfa3', '2017-04-24 18:36:09', 1, 'unit_name_4', null, null);

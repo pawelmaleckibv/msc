@@ -1,0 +1,3 @@
+INSERT INTO msc.questionaries (id, timestamp, version, isDeleted, name) VALUES ('01c10a9b-c601-4c2a-ae7e-d194055e3bf5', '2021-04-16 13:36:08', 1, false, 'name_1');
+INSERT INTO msc.questionaries (id, timestamp, version, isDeleted, name) VALUES ('0e6137de-9ea8-11eb-b70d-ffe43392c26c', '2021-04-16 13:37:34', 0, false, 'name_2');
+INSERT INTO msc.questionaries (id, timestamp, version, isDeleted, name) VALUES ('0e613b76-9ea8-11eb-b70e-eb70a16a839c', '2021-04-16 13:37:36', 0, false, 'name_3');
