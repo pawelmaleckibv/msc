@@ -102,18 +102,21 @@ public class TestDataInitializer {
     public void init() {
         TransactionStatus transaction = transactionManager.getTransaction(new DefaultTransactionAttribute());
         executeSQLScript("sql/languages.sql");
-        executeSQLScript("sql/employments.sql");
         executeSQLScript("sql/functionality.sql");
+        executeSQLScript("sql/msc_employments.sql");
         executeSQLScript("sql/msc_questionaries.sql");
         executeSQLScript("sql/msc_business_units.sql");
         executeSQLScript("sql/msc_questionary_x_business_unit.sql");
         executeSQLScript("sql/msc_questions.sql");
         executeSQLScript("sql/msc_questionary_x_question.sql");
+        executeSQLScript("sql/msc_answers.sql");
+        executeSQLScript("sql/msc_maturity_levels.sql");
+        executeSQLScript("sql/msc_organizations.sql");
 
 
 //        executeSQLScript("static_translations.sql");
-        List<Organization> organizations = new ArrayList<>();
-        organizations.add(testFestoCreator.doCreateEntity());
+//        List<Organization> organizations = new ArrayList<>();
+//        organizations.add(testFestoCreator.doCreateEntity());
 //        organizations.add(testBoshCreator.doCreateEntity());
 //
 //

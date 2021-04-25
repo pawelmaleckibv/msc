@@ -1,0 +1,11 @@
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('0829ab58-ea5e-4182-8921-efe1ea3f8506', '2014-04-24 19:28:28', 0, 'answerContent_7', 2, '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('0c9e258e-436b-421b-a4c8-e304c8079c8b', '2021-04-24 19:28:32', 1, 'answerContent_8', 3, '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('20a30b1f-79d7-4229-9fba-69cb52a8731b', '2005-04-24 19:28:34', 0, 'answerContent_9', 4, '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('591bb550-8e15-4d65-9836-05ef34f380b4', '2005-04-24 19:28:39', 1, 'answerContent_10', 5, '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('764c32e8-6a1b-4040-acfc-32dd8db2a4f8', '2015-04-24 19:28:25', 1, 'answerContent_6', 1, '4b9d78f3-546b-496c-b61a-9d982b1445ec');
+
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('38de8c68-fad8-4225-8761-2f423994e60b', '2013-04-24 19:28:14', 1, 'answerContent_2', 2, '192b7e7b-e887-4bdc-90f8-c337bf47fc74');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('3ee19882-098d-4faf-ad99-88cbdd07cb1a', '2018-04-24 19:28:21', 0, 'answerContent_5', 5, '192b7e7b-e887-4bdc-90f8-c337bf47fc74');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('4218555c-37b1-4b3e-8a39-d8849f90dedf', '2018-11-25 19:28:08', 0, 'answerContent_1', 1, '192b7e7b-e887-4bdc-90f8-c337bf47fc74');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('9fae6757-a6b1-4a78-b06d-4c5d0f9edcdf', '2020-04-24 19:28:20', 1, 'answerContent_4', 4, '192b7e7b-e887-4bdc-90f8-c337bf47fc74');
+INSERT INTO msc.answers (id, timestamp, version, answerContent, maturityLevel, question_id) VALUES ('baf3ba18-0d0e-4ade-a72b-4a871bc553d0', '2021-04-24 19:28:18', 0, 'answerContent_3', 3, '192b7e7b-e887-4bdc-90f8-c337bf47fc74');

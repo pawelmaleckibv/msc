@@ -1,4 +1,5 @@
-import {AccountStatus, AnswerType, MaturityEvaluationStatus, MaturityLevelTransitionStatus, QuestionType, Role, TaskPriority, TaskState} from './msc-enums';
+import {AccountStatus, AnswerType, MaturityEvaluationStatus,
+  MaturityLevelTransitionStatus, QuestionType, Role, TaskPriority, TaskState} from './msc-enums';
 import { MscBaseEntity } from './msc-base-entity';
 
 export interface Answer extends  MscBaseEntity{

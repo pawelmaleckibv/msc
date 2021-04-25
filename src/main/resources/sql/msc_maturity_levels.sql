@@ -1,0 +1,5 @@
+INSERT INTO msc.maturity_levels (id, timestamp, version, description, level) VALUES ('06a366e7-0940-4d0b-ac35-7c0a93a00edc', '2021-04-25 13:54:30', 1, 'description_2', 2);
+INSERT INTO msc.maturity_levels (id, timestamp, version, description, level) VALUES ('37a6278e-1f9e-406a-9e84-aa3831577a81', '2021-04-25 13:54:32', 1, 'description_4', 4);
+INSERT INTO msc.maturity_levels (id, timestamp, version, description, level) VALUES ('83285d29-0911-4d1f-b0a1-6f0bf3ccea67', '2021-04-25 13:54:31', 1, 'description_3', 3);
+INSERT INTO msc.maturity_levels (id, timestamp, version, description, level) VALUES ('90383b61-9704-4a7c-ae22-2cf992afe7a3', '2021-04-25 13:54:33', 1, 'description_5', 5);
+INSERT INTO msc.maturity_levels (id, timestamp, version, description, level) VALUES ('9595fd00-92ea-4f71-8544-0d1ad97f75b3', '2021-04-25 13:53:55', 1, 'description_1', 1);
