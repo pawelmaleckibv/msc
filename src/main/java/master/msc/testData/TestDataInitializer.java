@@ -9,14 +9,11 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.interceptor.DefaultTransactionAttribute;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
 import javax.sql.DataSource;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.sql.*;
+import java.io.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -103,15 +100,15 @@ public class TestDataInitializer {
         TransactionStatus transaction = transactionManager.getTransaction(new DefaultTransactionAttribute());
         executeSQLScript("sql/languages.sql");
         executeSQLScript("sql/functionality.sql");
-        executeSQLScript("sql/msc_employments.sql");
+        executeSQLScript("sql/employments.sql");
         executeSQLScript("sql/msc_questionaries.sql");
-        executeSQLScript("sql/msc_business_units.sql");
-        executeSQLScript("sql/msc_questionary_x_business_unit.sql");
-        executeSQLScript("sql/msc_questions.sql");
-        executeSQLScript("sql/msc_questionary_x_question.sql");
-        executeSQLScript("sql/msc_answers.sql");
         executeSQLScript("sql/msc_maturity_levels.sql");
         executeSQLScript("sql/msc_organizations.sql");
+        executeSQLScript("sql/msc_business_units.sql");
+        executeSQLScript("sql/msc_questions.sql");
+        executeSQLScript("sql/msc_questionary_x_business_unit.sql");
+        executeSQLScript("sql/msc_answers.sql");
+        executeSQLScript("sql/msc_questionary_x_question.sql");
 
 
 //        executeSQLScript("static_translations.sql");
@@ -207,9 +204,9 @@ public class TestDataInitializer {
 
     private void assignOrganizationsToUnits(List<Organization> organizations, List<BusinessUnit> businessUnits) {
 //        businessUnits.forEach(businessUnit -> businessUnit.setOrganization(organizations.get(new Random().nextInt(organizations.size()))));
-        int epoch = businessUnits.size()/organizations.size();
-        for (int i=0; i < organizations.size(); i++){
-            for (int j=0; j < epoch; j++) {
+        int epoch = businessUnits.size() / organizations.size();
+        for (int i = 0; i < organizations.size(); i++) {
+            for (int j = 0; j < epoch; j++) {
                 organizations.get(i).getBusinessUnits().add(businessUnits.get((i * epoch) + j));
                 businessUnits.get((i * epoch) + j).setOrganization(organizations.get(i));
             }
