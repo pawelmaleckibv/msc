@@ -1,9 +1,6 @@
 package master.msc.services.impl;
 
-import master.msc.model.Question;
-import master.msc.model.Question_;
 import master.msc.model.Questionary;
-import master.msc.model.Questionary_;
 import master.msc.services.api.QuestionaryService;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +8,6 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 import javax.transaction.Transactional;
 import java.util.List;
-
 
 @Service
 public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> implements QuestionaryService {
@@ -31,7 +27,6 @@ public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> i
         CriteriaBuilder criteriaBuilder = this.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Questionary> criteriaQuery = criteriaBuilder.createQuery(Questionary.class);
         Root<Questionary> rootEntity = criteriaQuery.from(Questionary.class);
-        Join<Questionary, Question> questionJoin = rootEntity.join(Questionary_.questions);
 
         criteriaQuery.select(rootEntity);
         TypedQuery<Questionary> questionaryTypedQuery = entityManager.createQuery(criteriaQuery);
