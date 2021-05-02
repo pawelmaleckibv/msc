@@ -1,9 +1,7 @@
 package master.msc.config;
 
 import com.blueveery.core.model.BaseEntity;
-import com.blueveery.scopes.ProxyInstanceFactory;
-import com.blueveery.scopes.ReflectionUtil;
-import com.blueveery.scopes.ShortTypeNameIdResolver;
+import com.blueveery.scopes.*;
 import com.blueveery.scopes.gson.BaseEntityDeserializer;
 import com.blueveery.scopes.gson.BaseEntitySerializer;
 import com.blueveery.scopes.gson.spring.JsonScopeRequestBodyAdvice;
@@ -24,6 +22,7 @@ import java.lang.reflect.Type;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Set;
 
 /**
  * The class responsible for providing configuration for serialization and deserialization of data.
@@ -49,7 +48,8 @@ public class HttpMessageConvertersConfiguration {
         gsonBuilder.registerTypeHierarchyAdapter(BaseEntity.class, baseEntityDeserializer);
 
 
-        BaseEntitySerializer baseEntitySerializer = new BaseEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
+//        BaseEntitySerializer baseEntitySerializer = new BaseEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
+        CustomEntitySerializer baseEntitySerializer = new CustomEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
         gsonBuilder.registerTypeHierarchyAdapter(BaseEntity.class, baseEntitySerializer);
 
         LocalDateTimeConverter localDateTimeConverter = new LocalDateTimeConverter();
@@ -132,5 +132,27 @@ public class HttpMessageConvertersConfiguration {
         }
     }
 
+
+    static final class CustomEntitySerializer extends BaseEntitySerializer{
+
+        public CustomEntitySerializer(ReflectionUtil reflectionUtil, TypeNameResolver typeNameResolver, JPASpecificOperations jpaSpecificOperations) {
+            super(reflectionUtil, typeNameResolver, jpaSpecificOperations);
+        }
+
+        @Override
+        public JsonElement serialize(BaseEntity entity, Type type, JsonSerializationContext context) {
+            return super.serialize(entity, type, context);
+        }
+
+        @Override
+        public boolean isInScope(Class<? extends BaseEntity> baseEntityClass, JsonScope jsonScope, Set<BaseEntity> serializationSet) {
+            return true;
+        }
+
+        @Override
+        public boolean isInScope(BaseEntity value, JsonScope jsonScope, Set<BaseEntity> serializationSet) {
+            return true;
+        }
+    }
 
 }

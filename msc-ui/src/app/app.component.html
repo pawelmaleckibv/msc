@@ -27,12 +27,16 @@
     <td>{{questionary.name}}</td>
     <td>
       <ul>
-        <li *ngFor="let bu of questionary.businessUnits">{{bu.id}}</li>
+        <li *ngFor="let businessUnit of questionary.businessUnits">{{businessUnit.name}}</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li *ngFor="let q of questionary.questions">{{q.id}}</li>
+        <li *ngFor="let question of questionary.questions">{{question.name + ':'}}
+        <ul>
+          <li *ngFor="let answer of question.answers">{{answer.answerContent}}
+        </ul>
+        </li>
       </ul>
     </td>
   </tr>
