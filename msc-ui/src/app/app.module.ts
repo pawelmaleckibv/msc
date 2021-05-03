@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuesionaryCtrl } from './msc-controllers';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RequestTimestampService } from './requestTimestampService';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [QuesionaryCtrl],
+  providers: [
+    QuesionaryCtrl,
+    { provide: HTTP_INTERCEPTORS, useClass: RequestTimestampService, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
