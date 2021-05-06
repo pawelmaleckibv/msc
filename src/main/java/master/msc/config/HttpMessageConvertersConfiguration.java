@@ -48,8 +48,7 @@ public class HttpMessageConvertersConfiguration {
         gsonBuilder.registerTypeHierarchyAdapter(BaseEntity.class, baseEntityDeserializer);
 
 
-//        BaseEntitySerializer baseEntitySerializer = new BaseEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
-        CustomEntitySerializer baseEntitySerializer = new CustomEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
+        BaseEntitySerializer baseEntitySerializer = new BaseEntitySerializer(reflectionUtil, shortTypeNameIdResolver, jpaSpecificOperations);
         gsonBuilder.registerTypeHierarchyAdapter(BaseEntity.class, baseEntitySerializer);
 
         LocalDateTimeConverter localDateTimeConverter = new LocalDateTimeConverter();
@@ -129,29 +128,6 @@ public class HttpMessageConvertersConfiguration {
         @Override
         public JsonElement serialize(Enum<?> anEnum, Type type, JsonSerializationContext jsonSerializationContext) {
             return jsonParser.parse(((Integer) anEnum.ordinal()).toString());
-        }
-    }
-
-
-    static final class CustomEntitySerializer extends BaseEntitySerializer{
-
-        public CustomEntitySerializer(ReflectionUtil reflectionUtil, TypeNameResolver typeNameResolver, JPASpecificOperations jpaSpecificOperations) {
-            super(reflectionUtil, typeNameResolver, jpaSpecificOperations);
-        }
-
-        @Override
-        public JsonElement serialize(BaseEntity entity, Type type, JsonSerializationContext context) {
-            return super.serialize(entity, type, context);
-        }
-
-        @Override
-        public boolean isInScope(Class<? extends BaseEntity> baseEntityClass, JsonScope jsonScope, Set<BaseEntity> serializationSet) {
-            return true;
-        }
-
-        @Override
-        public boolean isInScope(BaseEntity value, JsonScope jsonScope, Set<BaseEntity> serializationSet) {
-            return true;
         }
     }
 

@@ -17,9 +17,9 @@ export class QuesionaryCtrl {
     return this.httpService.get<Questionary[]>('/api/papa?rowNumbers=' + rowNumbers + '');
   }
 
-  // public getQuestionariesDto(rowNumbers: number | null): Observable<QuestionaryDto[]> {
-  //
-  //   return this.httpService.get<QuestionaryDto[]>('/api/questionaryDto?rowNumbers=' + rowNumbers + '');
-  // }
+  public getQuestionariesDTO(rowNumbers: number | null): Observable<QuestionaryDto[]> {
+
+    return this.httpService.get<QuestionaryDto[]>('/api/papaDTO?rowNumbers=' + rowNumbers + '');
+  }
 
 }

@@ -45,7 +45,7 @@ public class EntityManagerConfiguration {
     public EntityManagerFactory entityManagerFactory(DataSource dataSource, Properties hibernateProperties) {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan(modelPackagePath);
+        em.setPackagesToScan(modelPackagePath, "master.msc.model.QuestionaryDto");
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaProperties(hibernateProperties);
         em.setPersistenceUnitName("msc-unit");

@@ -30,5 +30,9 @@ export class AppComponent implements OnInit{
     this.quesionaryCtrl.getQuestionaries(20).subscribe( (questionary: Questionary[]) => {
       this.questionaryList = questionary;
     });
+
+    this.quesionaryCtrl.getQuestionariesDTO(20).subscribe( (questionaryDTO: QuestionaryDto[]) => {
+      this.questionaryDto = questionaryDTO;
+    });
   }
 }
