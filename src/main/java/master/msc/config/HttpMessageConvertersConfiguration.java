@@ -10,6 +10,7 @@ import com.blueveery.scopes.gson.spring.ScopedGsonHttpMessageConverter;
 import com.blueveery.scopes.hibernate.JPASpecificOperationsHibernateImpl;
 import com.google.gson.*;
 import master.msc.model.MscBaseEntity;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +31,7 @@ import java.util.Set;
  */
 @ComponentScan(basePackages = "master.msc.controllers")
 @Configuration
+@EntityScan("master.msc.model")
 public class HttpMessageConvertersConfiguration {
 
     @Bean

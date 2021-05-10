@@ -1,6 +1,5 @@
 package master.msc.config;
 
-import master.msc.model.MscBaseEntity;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,7 +44,7 @@ public class EntityManagerConfiguration {
     public EntityManagerFactory entityManagerFactory(DataSource dataSource, Properties hibernateProperties) {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan(modelPackagePath, "master.msc.model.QuestionaryDto");
+        em.setPackagesToScan(modelPackagePath);
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaProperties(hibernateProperties);
         em.setPersistenceUnitName("msc-unit");

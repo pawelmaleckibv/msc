@@ -17,13 +17,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    // this.quesionaryCtrl.getQuestionaries(20).subscribe( (questionary: Questionary[]) => {
-    //   this.questionary = questionary;
-    // });
-
-    // this.quesionaryCtrl.getQuestionariesDto(20).subscribe( (questionaryDto: QuestionaryDto[]) => {
-    //   this.questionaryDto = questionaryDto;
-    // });
   }
 
   start(): void {
