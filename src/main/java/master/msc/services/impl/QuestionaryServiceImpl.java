@@ -13,6 +13,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 import java.util.*;
+import java.util.stream.Stream;
 
 @Service
 public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> implements QuestionaryService {
@@ -32,13 +33,16 @@ public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> i
 
     @Override
     public List<QuestionaryDto> findAllLimitedDTO(int count) {
-        String query = "SELECT q.id as q_id, q.name as q_name , bu.id as bu_id, bu.name as bu_name, q2.id as q2_id, q2.name as q2_name, a.answerContent\n" +
-                "FROM questionaries q\n" +
-                "         JOIN questionary_x_business_unit qxbu on q.id = qxbu.questionary_id\n" +
-                "         JOIN business_units bu on bu.id = qxbu.business_unit_id\n" +
-                "         JOIN questionary_x_question qxq on q.id = qxq.questionary_id\n" +
-                "         JOIN questions q2 on qxq.question_id = q2.id\n" +
-                "         JOIN answers a on qxq.question_id = a.question_id";
+        String query =
+               "SELECT quest.id as auestioanryId,quest.name as questionaryName,\n" +
+                       "       bu.id as bUnitId,bu.name as buName,\n" +
+                       "       q.id as questionid,q.name as questionName, a.answerContent\n" +
+                       "FROM questionaries quest\n" +
+                       "         LEFT JOIN questionary_x_business_unit qxbu on quest.id = qxbu.questionary_id\n" +
+                       "         JOIN business_units bu on bu.id = qxbu.business_unit_id\n" +
+                       "         JOIN questionary_x_question qxq on quest.id = qxq.questionary_id\n" +
+                       "         JOIN questions q on qxq.question_id = q.id\n" +
+                       "         LEFT JOIN answers a on q.id = a.question_id";
 
         List<Tuple> resultList = entityManager.createNativeQuery(query, Tuple.class).getResultList();
 
@@ -48,16 +52,20 @@ public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> i
         if (it.hasNext()) {
             Tuple next = it.next();
             String qId = ((String) next.get(0));
+            System.out.println("qId : "+qId);
             while (next != null) {
                 QuestionaryDto questionaryDto = new QuestionaryDto();
                 questionaryDto.questionaryName = ((String) next.get(1));
-                Tuple tuple = mapBusinessUnits(it, next, 2, questionaryDto);
-                while (it.hasNext() && qId.equals(((String) tuple.get(0)))) {
-                    tuple = mapBusinessUnits(it, next, 2, questionaryDto);
+                System.out.println("questionaryName : "+ questionaryDto.questionaryName);
+
+                next = mapBusinessUnits(it, next, 2, questionaryDto);
+                while (it.hasNext() && qId.equals(((String) next.get(0)))) {
+                    next = mapBusinessUnits(it, next, 2, questionaryDto);
                 }
 
                 result.add(questionaryDto);
-                next = (!it.hasNext()) ? null : tuple;
+                next = (!it.hasNext()) ? null : next;
+                qId = (!it.hasNext()) ? null :((String) next.get(0));
             }
         }
         return result;
@@ -68,26 +76,39 @@ public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> i
         questionaryDto.businessUnitName.add((String) row.get(buIdx + 1));
 
         Tuple next = row;
+        System.out.println("mapBusinessUnits: " + next);
+//        Stream.of(next.toArray()).forEach(x -> System.out.print(" "+x.toString()));
+        System.out.println();
+
+
         do {
             final Map<Tuple, QuestionDto> stringQuestionDtoMap = mapQuestions(it, next, 4);
             questionaryDto.questionDto.add(stringQuestionDtoMap.values().iterator().next());
             next = stringQuestionDtoMap.keySet().iterator().next();
+            System.out.println();
+
         } while (it.hasNext() && buId.equals((String) next.get(buIdx)));
+        System.out.println("END mapBusinessUnits: " + next);
+
         return next;
     }
 
     private Map<Tuple, QuestionDto> mapQuestions(Iterator<Tuple> it, Tuple row, int qIdx) {
         String questionId = (String) row.get(qIdx);
+        System.out.println(String.format("questionId=%s", questionId));
         final ArrayList<String> answers = new ArrayList<>();
         Tuple nextRow = null;
         while (it.hasNext() && questionId.equals((String) (nextRow = it.next()).get(qIdx))) {
-            answers.add((String) nextRow.get(qIdx));
+            answers.add((String) nextRow.get(qIdx+2));
         }
         final QuestionDto questionDto = new QuestionDto();
         questionDto.questionName = ((String) row.get(qIdx + 1));
         questionDto.answers = answers;
         final HashMap<Tuple, QuestionDto> lastRowOnQuestions = new HashMap<>();
         lastRowOnQuestions.put(nextRow, questionDto);
+//        Stream.of(nextRow.toArray()).forEach(x -> System.out.print(" "+x.toString()));
+//        System.out.println("Question Answers: "+lastRowOnQuestions);
+
         return lastRowOnQuestions;
     }
 }

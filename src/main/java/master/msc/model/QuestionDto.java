@@ -30,4 +30,12 @@ public class QuestionDto  {
     public void setAnswers(List<String> answers) {
         this.answers = answers;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionDto{" +
+                "questionName='" + questionName + '\'' +
+                ", answers=" + answers +
+                '}';
+    }
 }
