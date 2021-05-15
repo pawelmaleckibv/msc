@@ -38,23 +38,27 @@ public class QuestionaryCtrl implements BaseCtrl<Questionary> {
         });
         long databaseQueryEnd = System.currentTimeMillis();
         long databaseQueryTime = databaseQueryEnd - databaseQueryStart;
-
         Logger.getLogger("DataBase").logTimes("dataBaseQuery", Questionary.class.toString(), databaseQueryStart, databaseQueryEnd, databaseQueryTime );
 
-        long start2 = System.currentTimeMillis();
-        Logger.getLogger("Transfer").singleLog(Questionary.class.toString(), start2 );
+        long transferStart = System.currentTimeMillis();
+        Logger.getLogger("Transfer").singleLog(Questionary.class.toString(), transferStart );
+
         return allLimited;
     }
 
     @RequestMapping(path = "papaDTO", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<QuestionaryDto> test2(@RequestParam("rowNumbers") int rowNumbers) {
-//        long start2 = System.currentTimeMillis();
+        long databaseQueryStartDto = System.currentTimeMillis();
 
         List<QuestionaryDto> allLimited = questionaryService.findAllLimitedDTO(rowNumbers);
 
-//        long time2 = System.currentTimeMillis() - start2;
-//        System.out.println(time2);
+        long databaseQueryEndDto = System.currentTimeMillis();
+        long databaseQueryTimeDto = databaseQueryEndDto - databaseQueryStartDto;
+        Logger.getLogger("DataBasetDto").logTimes("dataBaseQuerytDto", QuestionaryDto.class.toString(), databaseQueryStartDto, databaseQueryEndDto, databaseQueryTimeDto);
+
+        long transferStartDto = System.currentTimeMillis();
+        Logger.getLogger("TransferDto").singleLog(QuestionaryDto.class.toString(), transferStartDto);
 
         return allLimited;
     }
