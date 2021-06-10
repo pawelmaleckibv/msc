@@ -23,13 +23,13 @@ export class AppComponent implements OnInit {
   }
 
   start(): void {
-    this.quesionaryCtrl.getQuestionaries(20).subscribe( (questionary: Questionary[]) => {
+    this.quesionaryCtrl.getQuestionaries('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').subscribe( (questionary: Questionary[]) => {
       this.questionaryList = questionary;
     });
   }
 
   startMulti(): void {
-    this.quesionaryCtrl.getQuestionaries(20).pipe(
+    this.quesionaryCtrl.getQuestionaries('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').pipe(
       tap((questionary: Questionary[]) => {
         this.questionaryListMulti = questionary;
       }), repeat(10),
@@ -38,13 +38,13 @@ export class AppComponent implements OnInit {
   }
 
   startDto(): void {
-    this.quesionaryCtrl.getQuestionariesDTO(20).subscribe( (questionaryDTO: QuestionaryDto[]) => {
+    this.quesionaryCtrl.getQuestionariesDTO('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').subscribe( (questionaryDTO: QuestionaryDto[]) => {
       this.questionaryDto = questionaryDTO;
     });
   }
 
   startDtoMulti(): void {
-    this.quesionaryCtrl.getQuestionariesDTO(20).pipe(
+    this.quesionaryCtrl.getQuestionariesDTO('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').pipe(
       tap((questionaryDTO: QuestionaryDto[]) => {
         this.questionaryDtoMulti = questionaryDTO;
       }), repeat(10),

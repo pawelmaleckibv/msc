@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import master.msc.utils.Logger;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/")
@@ -22,11 +23,11 @@ public class QuestionaryCtrl implements BaseCtrl<Questionary> {
 
     @RequestMapping(path = "papa", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<Questionary> test1(@RequestParam("rowNumbers") int rowNumbers) {
+    public List<Questionary> test1(@RequestParam("id") UUID id) {
 
         long databaseQueryStart = System.currentTimeMillis();
 
-        List<Questionary> allLimited = questionaryService.findAllLimited(rowNumbers);
+        List<Questionary> allLimited = questionaryService.findById(id);
         allLimited.forEach(all -> {
             all.getBusinessUnits().forEach(bu -> {
                 bu.getName();
@@ -48,10 +49,10 @@ public class QuestionaryCtrl implements BaseCtrl<Questionary> {
 
     @RequestMapping(path = "papaDTO", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<QuestionaryDto> test2(@RequestParam("rowNumbers") int rowNumbers) {
+    public List<QuestionaryDto> test2(@RequestParam("id") UUID id) {
         long databaseQueryStartDto = System.currentTimeMillis();
 
-        List<QuestionaryDto> allLimited = questionaryService.findAllLimitedDTO(rowNumbers);
+        List<QuestionaryDto> allLimited = questionaryService.findByIdDTO(id);
 
         long databaseQueryEndDto = System.currentTimeMillis();
         long databaseQueryTimeDto = databaseQueryEndDto - databaseQueryStartDto;

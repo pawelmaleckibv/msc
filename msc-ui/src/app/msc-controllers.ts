@@ -12,14 +12,14 @@ export class QuesionaryCtrl {
     this.httpService = httpService;
   }
 
-  public getQuestionaries(rowNumbers: number | null): Observable<Questionary[]> {
+  public getQuestionaries(id: string | null): Observable<Questionary[]> {
 
-    return this.httpService.get<Questionary[]>('/api/papa?rowNumbers=' + rowNumbers + '');
+    return this.httpService.get<Questionary[]>('/api/papa?id=' + id + '');
   }
 
-  public getQuestionariesDTO(rowNumbers: number | null): Observable<QuestionaryDto[]> {
+  public getQuestionariesDTO(id: string | null): Observable<QuestionaryDto[]> {
 
-    return this.httpService.get<QuestionaryDto[]>('/api/papaDTO?rowNumbers=' + rowNumbers + '');
+    return this.httpService.get<QuestionaryDto[]>('/api/papaDTO?id=' + id + '');
   }
 
 }

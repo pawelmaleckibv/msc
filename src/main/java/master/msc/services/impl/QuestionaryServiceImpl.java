@@ -3,6 +3,7 @@ package master.msc.services.impl;
 import master.msc.model.QuestionDto;
 import master.msc.model.Questionary;
 import master.msc.model.QuestionaryDto;
+import master.msc.model.Questionary_;
 import master.msc.services.api.QuestionaryService;
 import org.springframework.stereotype.Service;
 
@@ -10,39 +11,41 @@ import javax.persistence.Tuple;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 import java.util.*;
-import java.util.stream.Stream;
 
 @Service
 public class QuestionaryServiceImpl extends BaseObjectServiceImpl<Questionary> implements QuestionaryService {
 
     @Transactional
     @Override
-    public List<Questionary> findAllLimited(int count) {
+    public List<Questionary> findById(UUID id) {
         CriteriaBuilder criteriaBuilder = this.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Questionary> criteriaQuery = criteriaBuilder.createQuery(Questionary.class);
         Root<Questionary> rootEntity = criteriaQuery.from(Questionary.class);
 
-        criteriaQuery.select(rootEntity);
+        Predicate predicate = criteriaBuilder.equal(rootEntity.get(Questionary_.id), id);
+        criteriaQuery.select(rootEntity).where(predicate);
         TypedQuery<Questionary> questionaryTypedQuery = entityManager.createQuery(criteriaQuery);
         List<Questionary> resultList = questionaryTypedQuery.getResultList();
         return resultList;
     }
 
     @Override
-    public List<QuestionaryDto> findAllLimitedDTO(int count) {
+    public List<QuestionaryDto> findByIdDTO(UUID id) {
         String query =
-                "SELECT quest.id as auestioanryId,quest.name as questionaryName,\n" +
-                        "       bu.id as bUnitId,bu.name as buName,\n" +
-                        "       q.id as questionid,q.name as questionName, a.answerContent\n" +
-                        "FROM questionaries quest\n" +
-                        "         LEFT JOIN questionary_x_business_unit qxbu on quest.id = qxbu.questionary_id\n" +
-                        "         JOIN business_units bu on bu.id = qxbu.business_unit_id\n" +
-                        "         JOIN questionary_x_question qxq on quest.id = qxq.questionary_id\n" +
-                        "         JOIN questions q on qxq.question_id = q.id\n" +
-                        "         LEFT JOIN answers a on q.id = a.question_id";
+                " SELECT quest.id as auestioanryId,quest.name as questionaryName,\n" +
+                        "                             bu.id as bUnitId,bu.name as buName,\n" +
+                        "                               q.id as questionid,q.name as questionName, a.answerContent\n" +
+                        "                        FROM questionaries quest\n" +
+                        "                                 LEFT JOIN questionary_x_business_unit qxbu on quest.id = qxbu.questionary_id\n" +
+                        "                                 JOIN business_units bu on bu.id = qxbu.business_unit_id\n" +
+                        "                                 JOIN questionary_x_question qxq on quest.id = qxq.questionary_id\n" +
+                        "                                 JOIN questions q on qxq.question_id = q.id\n" +
+                        "                                 LEFT JOIN answers a on q.id = a.question_id\n" +
+                        "                            where quest.id ='" + id +"' order by bu.id, q.id" ;
 
         List<Tuple> resultList = entityManager.createNativeQuery(query, Tuple.class).getResultList();
 
