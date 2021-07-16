@@ -6,13 +6,12 @@ import { HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { HttpEvent } from '@angular/common/http';
-import { tap, finalize, map } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestTimestampService implements HttpInterceptor {
-
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
     const startTime = (new Date()).getTime();
@@ -27,6 +26,7 @@ export class RequestTimestampService implements HttpInterceptor {
             event = event.clone({ headers: event.headers.set('startTime', startTime.toString()) });
             const diff = endTime - startTime;
 
+            console.log(event.url + ' endTime ' + endTime);
             console.log(event.url + ' succeded in ' + diff + ' milli seconds');
           }
           return event;
@@ -40,8 +40,7 @@ export class RequestTimestampService implements HttpInterceptor {
           }
         }
       )
-    )
-      ;
+    );
   }
   constructor() { }
 }

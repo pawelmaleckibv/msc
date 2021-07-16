@@ -23,22 +23,21 @@ export class AppComponent implements OnInit {
   }
 
   start(): void {
-    this.quesionaryCtrl.getQuestionaries('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').subscribe( (questionary: Questionary[]) => {
+    this.quesionaryCtrl.getQuestionaries('0e6137de-9ea8-11eb-b70d-ffe43392c26c').subscribe( (questionary: Questionary[]) => {
       this.questionaryList = questionary;
     });
   }
 
   startMulti(): void {
-    this.quesionaryCtrl.getQuestionaries('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').pipe(
+    this.quesionaryCtrl.getQuestionaries('0e6137de-9ea8-11eb-b70d-ffe43392c26c').pipe(
       tap((questionary: Questionary[]) => {
         this.questionaryListMulti = questionary;
-      }), repeat(10),
-      tap(() => console.log("w"))
+      }), repeat(100),
     ).subscribe();
   }
 
   startDto(): void {
-    this.quesionaryCtrl.getQuestionariesDTO('01c10a9b-c601-4c2a-ae7e-d194055e3bf5').subscribe( (questionaryDTO: QuestionaryDto[]) => {
+    this.quesionaryCtrl.getQuestionariesDTO('0e6137de-9ea8-11eb-b70d-ffe43392c26c').subscribe( (questionaryDTO: QuestionaryDto[]) => {
       this.questionaryDto = questionaryDTO;
     });
   }
